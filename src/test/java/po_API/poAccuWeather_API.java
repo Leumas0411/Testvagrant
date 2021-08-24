@@ -10,7 +10,7 @@ public class poAccuWeather_API extends TestBase {
 
 
 
-    public int get_current_Weather_API() throws Exception {
+    public float get_current_Weather_API() throws Exception {
 
         Map<String, String> params = new HashMap<String, String>();
         params.put("appid",configProps.get_property("api_key"));
@@ -20,7 +20,7 @@ public class poAccuWeather_API extends TestBase {
         String API_TEMP=resp.jsonPath().getString("main.temp");
         System.out.println("The temp in API is "+API_TEMP);
 
-        return Integer.parseInt(API_TEMP);
+        return Float.parseFloat(API_TEMP);
     }
 
 }

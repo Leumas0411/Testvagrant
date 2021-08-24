@@ -31,9 +31,6 @@ public class TestScenario extends TestBase {
     public void Compare_Temperature() throws Exception {
 
         home.Search_Location(data.get_property("UI_Location"));
-        int UI_Temp=UI.get_current_Weather();
-        int API_Temp=API.get_current_Weather_API();
-        System.out.println("The temperature in UI ==== "+UI_Temp+"\nThe temperature in API ==== "+API_Temp);
-
+        function.compare(UI.get_current_Weather(),API.get_current_Weather_API(),Integer.parseInt(data.get_property("variance")));
     }
 }

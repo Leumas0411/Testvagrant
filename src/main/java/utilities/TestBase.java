@@ -8,6 +8,7 @@ public class TestBase {
 
     public static BrowserUtilities browserUtils;
     public static RestUtilities rest;
+    public static JavaUtilities function;
     public static ConfigFileReader configProps;
     public static ConfigFileReader data;
     public static ConfigFileReader endpoint;
@@ -22,6 +23,8 @@ public class TestBase {
         browserUtils = new BrowserUtilities();
         //Initializing rest utilities package
         rest = new RestUtilities();
+        //Initializing Java utilities package
+        function = new JavaUtilities();
         //Loading the config file
         configProps = new ConfigFileReader("config.properties");
         //Loading the Test data file

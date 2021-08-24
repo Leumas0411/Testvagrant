@@ -25,9 +25,9 @@ public class PoAccuWeather_UI extends TestBase {
     @FindBy(xpath = "(//div[@class='temp'])[3]")
     WebElement tomorrow_Weather;
 
-    public int get_current_Weather()
+    public float get_current_Weather()
     {
-       return Integer.parseInt((current_Weather.getText().split("°C"))[0]);
+       return Float.parseFloat((current_Weather.getText().split("°C"))[0]);
     }
 
 
